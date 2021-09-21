@@ -25,11 +25,11 @@ namespace WebApi
         // add services to the DI container
         public void ConfigureServices(IServiceCollection services)
         {
-            // use sql server db in production and sqlite db in development
+            // use mysql db in production and sqlite db in development
             if (_env.IsProduction())
                 services.AddDbContext<DataContext>();
             else
-                services.AddDbContext<DataContext, SqliteDataContext>();
+                services.AddDbContext<DataContext, MySqlDataContext>();
 
             services.AddCors();
             services.AddControllers();
@@ -53,7 +53,11 @@ namespace WebApi
 
             // global cors policy
             app.UseCors(x => x
-                .AllowAnyOrigin()
+               .AllowAnyOrigin()
+                //.WithOrigins("http://localhost:3000")
+                //.WithOrigins("https://localhost:3000")
+                //.WithOrigins("https://localhost:1")
+                //.WithOrigins("http://localhost:1")
                 .AllowAnyMethod()
                 .AllowAnyHeader());
 

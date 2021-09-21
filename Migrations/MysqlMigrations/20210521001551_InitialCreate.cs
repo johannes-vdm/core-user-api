@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿//using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace WebApi.Migrations.SqliteMigrations
+namespace WebApi.Migrations.MysqlMigrations
 {
     public partial class InitialCreate : Migration
     {

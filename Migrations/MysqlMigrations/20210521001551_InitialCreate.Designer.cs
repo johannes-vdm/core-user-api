@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApi.Helpers;
 
-namespace WebApi.Migrations.SqliteMigrations
+namespace WebApi.Migrations.MysqlMigrations
 {
-    [DbContext(typeof(SqliteDataContext))]
+    [DbContext(typeof(MySqlDataContext))]
     [Migration("20210521001551_InitialCreate")]
     partial class InitialCreate
     {

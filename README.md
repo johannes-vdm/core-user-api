@@ -1,5 +1,55 @@
-# dotnet-5-registration-login-api
+- Authorization
 
-.NET 5.0 - Simple API for User Management, Authentication and Registration
+  - AllowAnonymousAttribute.cs
+  - AuthorizeAttribute.cs
+  - JwtMiddleware.cs
+  - JwtUtils.cs
 
-For documentation and instructions check out https://jasonwatmore.com/post/2021/05/25/net-5-simple-api-for-authentication-registration-and-user-management
+- Controllers
+
+    - UsersController.cs
+
+- Entities
+
+  - User.cs
+  - Helpers
+  - AppException.cs
+  - AppSettings.cs
+  - AutoMapperProfile.cs
+  - DataContext.cs
+  - ErrorHandlerMiddleware.cs
+  - MysqlDataContext.cs
+
+- Migrations
+
+  - MySQLMigrations
+
+    - 20210521001551_InitialCreate.cs
+
+    - 20210521001551_InitialCreate.Designer.cs
+
+     - MysqlDataContextModelSnapshot.cs
+
+  - SqlServerMigrations
+
+    - 20210521001453_InitialCreate.cs
+    - 20210521001453_InitialCreate.Designer.cs
+    - DataContextModelSnapshot.cs
+
+- Models
+
+- Users
+  - AuthenticateRequest.cs
+  - AuthenticateResponse.cs
+  - RegisterRequest.cs
+  - UpdateRequest.cs
+
+- Services
+
+  - UserService.cs
+  - appsettings.Development.json
+  - appsettings.json
+  - omnisharp.json
+  - Program.cs
+  - Startup.cs
+  - WebApi.csproj

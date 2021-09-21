@@ -1,17 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-//using MySql.Data.EntityFrameworkCore.Extensions;
-
 namespace WebApi.Helpers
 {
-    public class SqliteDataContext : DataContext
+    public class MySqlDataContext : DataContext
     {
-        public SqliteDataContext(IConfiguration configuration) : base(configuration) { }
+        public MySqlDataContext(IConfiguration configuration) : base(configuration) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            // connect to MySQl database
+            // connect to MySql database
             options.UseMySQL(Configuration.GetConnectionString("MySqlDatabase"));
         }
     }
